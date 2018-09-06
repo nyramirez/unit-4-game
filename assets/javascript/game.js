@@ -21,155 +21,90 @@ $(document).ready(function () {
     var loss = 0;
     $(".lossesCount").html(loss);
 
+    // Creationg a fuctions.
+
+    function resetValues() {
+        console.log("*****************");
+        score = 0;
+        randomNumber = Math.floor((Math.random() * 102)) + 19;
+        $(".random-Number").html(randomNumber);
+        console.log(randomNumber);
+        blueGem = Math.floor((Math.random() * 11)) + 1;
+        console.log(blueGem);
+        greenGem = Math.floor((Math.random() * 11)) + 1;
+        console.log(greenGem);
+        pinkGem = Math.floor((Math.random() * 11)) + 1;
+        console.log(pinkGem);
+        redGem = Math.floor((Math.random() * 11)) + 1;
+        console.log(redGem);
+    };
+
+    function resetGameWins () {
+        if (wins === 5) {
+            alert(" YOU WON THE GAME !!!!!");
+            wins = 0;
+            $(".winsCount").html(wins);
+            loss = 0;
+            $(".lossesCount").html(loss);
+        };
+    };
+
+    function resetGameLoss () {
+        if (loss === 3) {
+            alert("YOU FAIL !!!!!!");
+            wins = 0;
+            $(".winsCount").html(wins);
+            loss = 0;
+            $(".lossesCount").html(loss);
+        };
+    };
+
+    function scoreCounter () {
+        if (randomNumber === score) {
+            $(".feedBack").html("   You Win !!!!   ");
+            wins += 1;
+            $(".winsCount").html(wins);
+            resetValues();
+            resetGameWins();
+        }
+    
+        else if (randomNumber < score) {
+            $(".feedBack").html("    ;(   ");
+            loss += 1;
+            $(".lossesCount").html(loss);
+            resetValues();
+            resetGameLoss();
+        };        
+    };
+    
 
     // Creating functions to add random values of gems.
     $("#blue-Gem").on("click", function () {
         score = score + blueGem;
         $(".score").html(score);
-        console.log("----------");
-        console.log(randomNumber);
-        console.log(score);
-        console.log("----------");
-        console.log(wins);
-        console.log(loss);
-
-        if (randomNumber === score) {
-            $(".feedBack").html("   You Win !!!!   ");
-            wins += 1;
-            $(".winsCount").html(wins);
-        }
-    
-        else if (randomNumber < score) {
-            $(".feedBack").html("    ;(   ");
-            loss += 1;
-            $(".lossesCount").html(loss);
-        };
-    
-        console.log("************");
-        console.log(randomNumber);
-        console.log(score);
-        console.log("----------");
-        console.log(wins);
-        console.log(loss);
+        scoreCounter();
+        
     });
 
     $("#green-Gem").on("click", function () {
         score = score + greenGem;
         $(".score").html(score);
-        console.log("----------");
-        console.log(randomNumber);
-        console.log(score);
-        console.log("----------");
-        console.log(wins);
-        console.log(loss);
-
-        if (randomNumber === score) {
-            $(".feedBack").html("   You Win !!!!   ");
-            wins += 1;
-            $(".winsCount").html(wins);
-        }
-    
-        else if (randomNumber < score) {
-            $(".feedBack").html("    ;(   ");
-            loss += 1;
-            $(".lossesCount").html(loss);
-        };
-    
-        console.log("************");
-        console.log(randomNumber);
-        console.log(score);
-        console.log("----------");
-        console.log(wins);
-        console.log(loss);
+        scoreCounter();
+        
     });
 
     $("#pink-Gem").on("click", function () {
         score = score + pinkGem;
         $(".score").html(score);
-        console.log("----------");
-        console.log(randomNumber);
-        console.log(score);
-        console.log("----------");
-        console.log(wins);
-        console.log(loss);
-
-        if (randomNumber === score) {
-            $(".feedBack").html("   You Win !!!!   ");
-            wins += 1;
-            $(".winsCount").html(wins);
-        }
-    
-        else if (randomNumber < score) {
-            $(".feedBack").html("    ;(   ");
-            loss += 1;
-            $(".lossesCount").html(loss);
-        };
-    
-        console.log("************");
-        console.log(randomNumber);
-        console.log(score);
-        console.log("----------");
-        console.log(wins);
-        console.log(loss);
+        scoreCounter();
+        
     });
 
     $("#red-Gem").on("click", function () {
         score = score + redGem;
         $(".score").html(score);
-        console.log("----------");
-        console.log(randomNumber);
-        console.log(score);
-        console.log("----------");
-        console.log(wins);
-        console.log(loss);
-
-        if (randomNumber === score) {
-            $(".feedBack").html("   You Win !!!!   ");
-            wins += 1;
-            $(".winsCount").html(wins);
-        }
-    
-        else if (randomNumber < score) {
-            $(".feedBack").html("    ;(   ");
-            loss += 1;
-            $(".lossesCount").html(loss);
-        };
-    
-        console.log("************");
-        console.log(randomNumber);
-        console.log(score);
-        console.log("----------");
-        console.log(wins);
-        console.log(loss);
+        scoreCounter();
+        
     });
-
-    // if (randomNumber === score) {
-    //     $(".feedBack").html("   You Win !!!!   ");
-    //     wins += 1;
-    //     $(".winsCount").html(wins);
-    // }
-
-    // else if (randomNumber < score) {
-    //     $(".feedBack").html("    ;(   ");
-    //     loss += 1;
-    //     $(".lossesCount").html(loss);
-    // };
-
-    // console.log("************");
-    // console.log(randomNumber);
-    // console.log(score);
-    // console.log("----------");
-    // console.log(wins);
-    // console.log(loss);
-
-
-
-
-
-
-
-
-
-
-
+    
 });
