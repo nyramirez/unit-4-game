@@ -1,0 +1,13 @@
+.gemPic {
+    align-items: center;
+    /* background-color: red; */
+}
+
+img {
+    width: 12%;
+    height: auto;
+    margin-left: 10%;
+}
+#raNum {
+    background-color:  lightblue;
+}

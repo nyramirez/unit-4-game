@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1.0, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Crystal Colector</title>
+</head>
+<body>
+
+    <div class ="row">
+            <div class="col-sm-4"></div>
+                <div class="col-sm-4">
+                    <h1 class= "mx-auto">Crystla Colector</h1>
+                </div>
+            <div class="col-sm-4"></div>
+    </div>
+    <hr>
+    <div class ="row">
+        <div class="col-sm-3"></div>
+            <div class="col-sm-6">
+            <p>You will be given a randon number at the start of the game.</p>            
+            <p>There are four crystals below. By clicking on a crystal you will add an specific amount of points to your local score.</p>    
+            <p>You win the game by matching your total score to the random number. You loose the game if your total score goes above the random number.</p>
+            <p>The value of each cryatl is hidden until you click on it</p>
+            <p>Each time when the game starts, the game will change the value of the crystals.</p>
+        </div>
+        <div class="col-sm-3"></div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-3" id="raNum">
+            <div class="random-Number"></div>
+        </div>
+        <div class="col-sm-3" id="winLose">
+            <div class="row">
+                <p class="feedBack"></p>
+            </div>
+            <div class="row">
+                <p>Win: </p>
+                <p class="winsCount"></p>
+            </div>
+            <div class="row">
+                    <p>Losses: </p>
+                    <p class="lossesCount"></p>
+            </div>    
+        </div>
+        <div class="col-sm-3"></div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-6 gemPic">
+            <img id="blue-Gem" src="assets/images/blue.jpeg" alt="blueGem">
+            <img id ="green-Gem" src="assets/images/Green.jpeg" alt="greenGem">
+            <img id="pink-Gem" src="assets/images/Pink.jpeg" alt="pinkGem">
+            <img id="red-Gem" src="assets/images/Red.jpeg" alt="redGem">
+        </div>
+        <div class="col-sm-3"></div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-3">
+            Your Score is:
+        </div>
+        <div class="col-sm-3">
+            <div class="score"></div>
+        </div>
+        <div class="col-sm-3"></div>
+    </div>
+
+
+<script src="./assets/javascript/game.js"></script>
+
+</body>
+</html>
